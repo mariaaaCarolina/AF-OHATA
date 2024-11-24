@@ -17,7 +17,7 @@ Erros identidificados:
 - O código também apresenta um erro ao chamar a função verificarUsuario(), que ocorre devido ao problema na função conectarBD(), mencionado anteriormente, causado pelo não reconhecimento do Driver.Manager
 - No final do código, ao imprimir a variável result, o console retorna false porque a conexão com o banco de dados não foi estabelecida, o que impede a execução da consulta.
   
-Plano de testes:
+Plano de Testes - estático:
 ![plano de testes](./images/plano%20de%20testes.png)
 
 Link do plano de testes: https://docs.google.com/spreadsheets/d/1RjKMKughNaGOoehoagqGEK7g7V-nr3_D/edit?usp=sharing&ouid=118297399208605566763&rtpof=true&sd=true
