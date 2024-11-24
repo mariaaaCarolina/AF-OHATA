@@ -6,6 +6,7 @@ Código Java com pontos numerado:
 Cálculo Ciclomático:
 
 -   M = 16 - 16 + 2 \* 1
+-   M = 2
 
 Grafo de fluxo:
 
@@ -18,4 +19,5 @@ Caminho 2:
 ![caminho 2](./images/caminho%202.jpeg)
 
 Diagrama auxiliar:
+
 ![diagrama auxiliar](./images/af%20diagrama%20de%20atividades%20código%20java.jpeg)
