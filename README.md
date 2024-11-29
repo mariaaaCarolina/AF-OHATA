@@ -1,23 +1,22 @@
 Maria Carolina de Oliveira Barbosa - 235810
 
-Erros identidificados: 
+# Erros identidificados: 
 
-- Na linha: Class.forName("com.mysql.Driver.Manager").newInstance();, não reconhece o Driver.Manager para executar a conexão do banco de dados.
-  erro: java.lang.ClassNotFoundException: com.mysql.Driver.Manager
-  	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-  	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-  	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
-  	at java.base/java.lang.Class.forName0(Native Method)
-  	at java.base/java.lang.Class.forName(Class.java:391)
-  	at java.base/java.lang.Class.forName(Class.java:382)
-  	at login.User.conectarBD(User.java:11)
-  	at login.User.verificarUsuario(User.java:23)
-  	at login.main.main(main.java:9)
+- Na linha: Class.forName("com.mysql.Driver.Manager").newInstance();, não reconhece o Driver.Manager para executar a conexão do banco de dados, gerando um erro "ClassNotFoundException", é sugerido o uso de **com.mysql.cj.jdbc.Driver**;
 
-- O código também apresenta um erro ao chamar a função verificarUsuario(), que ocorre devido ao problema na função conectarBD(), mencionado anteriormente, causado pelo não reconhecimento do Driver.Manager
-- No final do código, ao imprimir a variável result, o console retorna false porque a conexão com o banco de dados não foi estabelecida, o que impede a execução da consulta.
+- O código também apresenta um erro ao chamar a função verificarUsuario(), que ocorre devido ao problema na função conectarBD(), que retorna null (devido a falha na conexão) e ao executar o método passando a conexão como nula gera um NullPointerException;
   
-Plano de Testes - estático:
+- No final do código, ao imprimir a variável result, o console retorna false porque a conexão com o banco de dados não foi estabelecida, o que impede a execução correta da consulta;
+
+- Não há uma classe Main para a compilação do código Login.User;
+
+- Não há tratamento de exceções nos blocos Catch;
+
+- A consulta SQL não é segura contra SQL Injections;
+
+- A conexão em nenhum momento é fechada.
+  
+## **Plano de Testes - estático:**
 ![plano de testes](./images/plano%20de%20testes.png)
 
-Link do plano de testes: https://docs.google.com/spreadsheets/d/1RjKMKughNaGOoehoagqGEK7g7V-nr3_D/edit?usp=sharing&ouid=118297399208605566763&rtpof=true&sd=true
+**Link do plano de testes**: https://docs.google.com/spreadsheets/d/1RjKMKughNaGOoehoagqGEK7g7V-nr3_D/edit?usp=sharing&ouid=118297399208605566763&rtpof=true&sd=true
