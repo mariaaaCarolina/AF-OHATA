@@ -1,6 +1,6 @@
 Maria Carolina de Oliveira Barbosa - 235810
 
-# Projeto de Verificação de Usuário
+# Verificação de Usuário
 
 Este repositório contém uma classe em Java que implementa funcionalidades para:
 
@@ -24,7 +24,7 @@ Este repositório contém uma classe em Java que implementa funcionalidades para
 2. Configure a URL de conexão com o banco no método `conectarBD`, ajustando:
    - Endereço do banco (`127.0.0.1`).
    - Nome do banco de dados (`test`).
-   - Usuário e senha (`lopes` e `123`).
+   - Usuário e senha (`root` e `123`).
 
 3. Compile e execute o código da classe.
 
