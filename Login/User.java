@@ -26,7 +26,7 @@ public class User {
             
             // URL de conexão com o banco de dados
             // Inclui o endereço do servidor, nome do banco de dados, usuário e senha
-            String url = "jdbc:mysql://127.0.0.1/test?user=lopes&password=123";
+            String url = "jdbc:mysql://127.0.0.1/test?user=root&password=123";
             
             // Estabelece a conexão com o banco de dados
             conn = DriverManager.getConnection(url);
@@ -37,6 +37,7 @@ public class User {
 
     /**
      * Nome do usuário verificado
+     * Este campo é preenchido após autenticação bem-sucedida no método {@link #verificarUsuario(String, String)}.
      */
     public String nome = "";
 
