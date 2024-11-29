@@ -1,23 +1,35 @@
 Maria Carolina de Oliveira Barbosa - 235810
 
-Erros identidificados: 
+# Verificação de Usuário
 
-- Na linha: Class.forName("com.mysql.Driver.Manager").newInstance();, não reconhece o Driver.Manager para executar a conexão do banco de dados.
-  erro: java.lang.ClassNotFoundException: com.mysql.Driver.Manager
-  	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-  	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-  	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
-  	at java.base/java.lang.Class.forName0(Native Method)
-  	at java.base/java.lang.Class.forName(Class.java:391)
-  	at java.base/java.lang.Class.forName(Class.java:382)
-  	at login.User.conectarBD(User.java:11)
-  	at login.User.verificarUsuario(User.java:23)
-  	at login.main.main(main.java:9)
+Este repositório contém uma classe em Java que implementa funcionalidades para:
 
-- O código também apresenta um erro ao chamar a função verificarUsuario(), que ocorre devido ao problema na função conectarBD(), mencionado anteriormente, causado pelo não reconhecimento do Driver.Manager
-- No final do código, ao imprimir a variável result, o console retorna false porque a conexão com o banco de dados não foi estabelecida, o que impede a execução da consulta.
-  
-Plano de Testes - estático:
-![plano de testes](./images/plano%20de%20testes.png)
+1. Conexão ao banco de dados MySQL.
+2. Verificação de login e senha de um usuário no sistema.
 
-Link do plano de testes: https://docs.google.com/spreadsheets/d/1RjKMKughNaGOoehoagqGEK7g7V-nr3_D/edit?usp=sharing&ouid=118297399208605566763&rtpof=true&sd=true
+## Funcionalidades
+
+- **Conexão ao Banco de Dados:** O método `conectarBD` estabelece uma conexão com um banco de dados MySQL usando o driver JDBC.
+- **Autenticação de Usuário:** O método `verificarUsuario` realiza a autenticação de um usuário no banco de dados com base nas credenciais fornecidas.
+
+## Pré-requisitos
+
+- Java Development Kit (JDK) 8 ou superior.
+- Banco de dados MySQL configurado e acessível.
+- Dependência do driver JDBC do MySQL.
+
+## Como Executar
+
+1. Certifique-se de que o banco de dados está ativo e acessível.
+2. Configure a URL de conexão com o banco no método `conectarBD`, ajustando:
+   - Endereço do banco (`127.0.0.1`).
+   - Nome do banco de dados (`test`).
+   - Usuário e senha (`root` e `123`).
+
+3. Compile e execute o código da classe.
+
+## Estrutura do Código
+
+- **Pacote `Login`:** Contém a classe `User`.
+- **Classe `User`:** Implementa métodos para conexão e autenticação.
+
